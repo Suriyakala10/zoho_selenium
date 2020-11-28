@@ -1,5 +1,5 @@
 # zoho_selenium
-Zoho Selenium Tests (This project is created part of the coding exercise for Zoho Show).
+Zoho Selenium Tests (This project has been created part of the coding exercise for Zoho Show).
 
 The test runner framework used is TestNG. The stable version Selenium/WebDriver is used for creating the test cases for Web Appication. Refer ./pom.xml file for dependencies.
 
@@ -7,10 +7,9 @@ The project uses page object pattern, each page has its own locators and associa
 
 Common utilities can be found under utils package.
 
+Modify the testng/regressions.xml file for running one or multiple TestNG test cases.
 
-
-To run the tests use
+To run the tests use from you command line or any of your favorite IDE like IntelliJ IDEA.
 ```
-mvn clean test
+mvn clean test -P automation
 ```
-
