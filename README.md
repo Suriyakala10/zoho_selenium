@@ -16,7 +16,8 @@ Modify [regressions.xml](testng/regressions.xml) file under testng for running o
 Modify [develop.properties](src/test/resources/develop.properties) to change the chromedriver path.
 
 ## Running test
-To run the tests use from you command line or any of your favorite IDE like IntelliJ IDEA.
+To run the tests from your command line or any of your favorite IDE like IntelliJ IDEA.
+Use the below command:
 ```
 mvn clean test -P automation
 ```
