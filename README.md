@@ -3,7 +3,7 @@ Zoho Selenium Tests (This project has been created part of the coding exercise f
 
 * The test runner framework used is TestNG. 
 * The stable version Selenium/WebDriver is used for creating the test cases for Web Appication. 
-* Refer ./pom.xml file for dependencies.
+* Refer [./pom.xml](pom.xml) file for dependencies.
 
 The project uses page object pattern, each page has its own locators and associated methods.
 
