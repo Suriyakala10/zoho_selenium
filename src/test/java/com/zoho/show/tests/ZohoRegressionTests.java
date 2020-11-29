@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 public class ZohoRegressionTests extends BaseTest {
 
     @Test
-    public void testSignInSignOut() {
+    public void testDSignInSignOut() {
         ZohoShowHomePage homePage = gotoShowHomePage();
         SignInPage signInPage = homePage.clickLoginLink();
         Assert.assertEquals("Title check", getTitle(), SignInPage.ZOHO_ACCOUNTS_TITLE);
@@ -31,7 +31,7 @@ public class ZohoRegressionTests extends BaseTest {
     }
 
     @Test
-    public void testListingView() {
+    public void testAListingView() {
         ZohoShowHomePage homePage = gotoShowHomePage();
         SignInPage signInPage = homePage.clickLoginLink();
         //DriverUtils.delay(3000);
@@ -49,7 +49,7 @@ public class ZohoRegressionTests extends BaseTest {
     }
 
     @Test
-    public void testSlideRightClickLockUnlock() {
+    public void testBSlideRightClickLockUnlock() {
         ZohoShowHomePage homePage = gotoShowHomePage();
         SignInPage signInPage = homePage.clickLoginLink();
         //DriverUtils.delay(3000);
@@ -66,7 +66,7 @@ public class ZohoRegressionTests extends BaseTest {
     }
 
     @Test
-    public void testClickPlayOptionButton() {
+    public void testCClickPlayOptionButton() {
         ZohoShowHomePage homePage = gotoShowHomePage();
         SignInPage signInPage = homePage.clickLoginLink();
         //DriverUtils.delay(3000);
@@ -84,7 +84,7 @@ public class ZohoRegressionTests extends BaseTest {
     }
 
     @Test
-    public void testSlideRightClickAndAddComment() {
+    public void testDSlideRightClickAndAddComment() {
         ZohoShowHomePage homePage = gotoShowHomePage();
         SignInPage signInPage = homePage.clickLoginLink();
         //DriverUtils.delay(3000);
