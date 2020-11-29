@@ -1,8 +1,10 @@
 package com.zoho.show.pages;
 
+import com.zoho.show.utils.DriverUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
@@ -41,6 +43,11 @@ public class ShowDashboardPage {
     @FindBy(xpath="//div[@id='owned']//li//span[@class='zs-pre-modified-on ui-left']")
     private List<WebElement> modifiedTime;
 
+    @FindBy(css="div#owned li:nth-of-type(1) > #zs_imgCont")
+    private static WebElement slideClick;
+
+    private String currentWindowHandle;
+
     public ShowDashboardPage(WebDriver driver) {
         this.driver = driver;
     }
@@ -78,6 +85,13 @@ public class ShowDashboardPage {
     public ShowDashboardPage clickListViewButton() {
         listButton.click();
         return this;
+    }
+
+    public PresentationPage clickFirstSlideIconSwitchToNewTab() {
+        slideClick.click();
+        currentWindowHandle = new DriverUtils(driver).switchToNewWindowReturnWinHandleBefore();
+        new DriverUtils(driver).waitForPageToLoad(30);
+        return PageFactory.initElements(driver, PresentationPage.class);
     }
 
 }

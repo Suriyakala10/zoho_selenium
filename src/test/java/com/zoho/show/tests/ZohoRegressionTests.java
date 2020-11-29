@@ -1,6 +1,7 @@
 package com.zoho.show.tests;
 
 import com.zoho.show.base.BaseTest;
+import com.zoho.show.pages.PresentationPage;
 import com.zoho.show.pages.ShowDashboardPage;
 import com.zoho.show.pages.SignInPage;
 import com.zoho.show.pages.ZohoShowHomePage;
@@ -8,7 +9,7 @@ import com.zoho.show.utils.DriverUtils;
 import org.junit.Assert;
 import org.testng.annotations.Test;
 
-public class LoginTest extends BaseTest {
+public class ZohoRegressionTests extends BaseTest {
 
     @Test
     public void testSignInSignOut() {
@@ -44,6 +45,23 @@ public class LoginTest extends BaseTest {
                 .clickListViewButton();
 
         // For demo purposes this delay is added
+        DriverUtils.delay(6000);
+    }
+
+    @Test
+    public void testSlideRightClickLockUnlock() {
+        ZohoShowHomePage homePage = gotoShowHomePage();
+        SignInPage signInPage = homePage.clickLoginLink();
+        //DriverUtils.delay(3000);
+        ShowDashboardPage dashboardPage =  signInPage.login(testConfigProperties.zohoUserName()
+                ,testConfigProperties.zohoUserPassword());
+        Assert.assertEquals("Title check", getTitle(), SignInPage.ZOHO_ACCOUNTS_TITLE);
+        DriverUtils.delay(3000);
+        PresentationPage presentationPage = dashboardPage.clickFirstSlideIconSwitchToNewTab();
+        presentationPage
+                .clickOnFirstGallerySlide()
+                .rightClickOnFirstSlideAndClickLock()
+                .mouseHoverOnLockIcon();
         DriverUtils.delay(6000);
     }
 }

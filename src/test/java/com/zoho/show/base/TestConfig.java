@@ -29,4 +29,8 @@ public interface TestConfig extends Config {
     @Key("KEEP_BROWSER_OPEN")
     @DefaultValue("false")
     boolean keepBrowserOpen();
+
+    @Key("CHROME_DRIVER_PATH")
+    @DefaultValue("")
+    String chromeDriverPath();
 }

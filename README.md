@@ -9,6 +9,8 @@ Common utilities can be found under utils package.
 
 Modify the testng/regressions.xml file for running one or multiple TestNG test cases.
 
+Modify resources/develop.properties to change the chromedriver path.
+
 To run the tests use from you command line or any of your favorite IDE like IntelliJ IDEA.
 ```
 mvn clean test -P automation

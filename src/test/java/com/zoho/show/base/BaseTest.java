@@ -14,15 +14,14 @@ import org.testng.annotations.BeforeMethod;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
-    private static final String BASE_URL  = "https://www.zoho.com/show/";
+    private static final String BASE_URL = "https://www.zoho.com/show/";
     protected static WebDriver driver;
     public static final TestConfig testConfigProperties = ConfigCache.getOrCreate(TestConfig.class);
     public static final String ZOHO_SHOW_HOME_PAGE_TITLE = "Online Presentation Software | Create & Edit Slides Online - Zoho Show";
 
     @BeforeMethod
     public static void setUpDriver() {
-        // System.setProperty("webdriver.chrome.driver",
-        // "C:/SeleniumRC/tools/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", testConfigProperties.chromeDriverPath());
 
         driver = new ChromeDriver();
 
