@@ -165,13 +165,12 @@ public class DriverUtils {
 
     /**
      * Select option.
-     *
-     * @param selectedElement the selected element
+     *  @param selectedElement the selected element
      * @param selectOption    the select option
      */
-    public void selectOption(WebElement selectedElement, final String selectOption) {
-        Select select = new Select(selectedElement);
-        select.selectByVisibleText(selectOption);
+   public void selectOption(WebElement selectedElement, final int selectOption) {
+       Select select = new Select(selectedElement);
+      select.selectByVisibleText(String.valueOf(selectOption));
     }
 
     /**

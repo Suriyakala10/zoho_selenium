@@ -33,4 +33,5 @@ public interface TestConfig extends Config {
     @Key("CHROME_DRIVER_PATH")
     @DefaultValue("")
     String chromeDriverPath();
+
 }
