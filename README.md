@@ -11,9 +11,9 @@ Common utilities can be found under utils package.
 
 ## Configurations
 
-Modify [regressions.xml] (testng/regressions.xml) file under testng for running one or multiple TestNG test cases.
+Modify [regressions.xml](testng/regressions.xml) file under testng for running one or multiple TestNG test cases.
 
-Modify [develop.properties] (resources/develop.properties) to change the chromedriver path.
+Modify [develop.properties](resources/develop.properties) to change the chromedriver path.
 
 ## Running test
 To run the tests use from you command line or any of your favorite IDE like IntelliJ IDEA.
@@ -21,6 +21,6 @@ To run the tests use from you command line or any of your favorite IDE like Inte
 mvn clean test -P automation
 ```
 ## Reports
-A report sample can be found under report (.reports) directory.
+A sample PDF report can be found under [report](.reports) directory.
 
-You can also check [reports] (target/surefire-reports) for additional reports.
+You can also check generated [reports](target/surefire-reports) for additional reports.
